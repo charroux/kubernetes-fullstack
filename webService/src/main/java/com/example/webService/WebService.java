@@ -3,7 +3,7 @@ package com.example.webService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBoby;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -18,7 +18,7 @@ public class WebService {
     }
 
     @PostMapping("/cars")
-    public void addCar(@RequestBoby Car car){
+    public void addCar(@RequestBody Car car){
         carRepository.save(car);
     }
 	
